@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  ami           = "ami-0fa1ca9559f1892ec"
+  ami           = "ami-"
   instance_type = "t2.micro"
   key_name = "host"
   subnet_id = aws_subnet.public-subnet[count.index].id
@@ -25,7 +25,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_instance" "db" {
-  ami           = "ami-0fa1ca9559f1892ec"
+  ami           = "ami-"
   instance_type = "t2.micro"
   key_name = "host"
   subnet_id = aws_subnet.private-subnet.id
